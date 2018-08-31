@@ -29,7 +29,7 @@ App = {
       // Connect provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider);
 
-      // App.listenForEvents();
+      //App.listenForEvents();
 
       return App.render();
     });
@@ -94,7 +94,7 @@ App = {
           candidatesSelect.append(candidateOption);
         });
       }
-      //return electionInstance.voters(App.account);
+      return electionInstance.voters(App.account);
     }).then(function(hasVoted) {
       // Do not allow a user to vote
       if(hasVoted) {
